@@ -51,8 +51,6 @@ public class SecurityConfig {
                 .anyRequest().authenticated()
         );
 
-        http.sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
-        http.authenticationProvider(daoAuthenticationProvider());
         http.addFilterAfter(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();

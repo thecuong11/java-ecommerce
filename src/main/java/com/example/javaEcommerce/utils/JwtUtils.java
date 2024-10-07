@@ -1,17 +1,11 @@
 package com.example.javaEcommerce.utils;
 
 import com.example.javaEcommerce.config.EnvConfig;
-import com.example.javaEcommerce.config.SecurityConfig;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.security.Keys;
-import jakarta.servlet.ServletException;
-import jakarta.servlet.http.HttpServletRequest;
 import lombok.extern.log4j.Log4j2;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.util.AntPathMatcher;
 
 import javax.crypto.SecretKey;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.Map;
 

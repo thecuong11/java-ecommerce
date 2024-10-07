@@ -1,6 +1,5 @@
 package com.example.javaEcommerce.services.impl;
 
-import com.example.javaEcommerce.enums.SesionStatus;
 import com.example.javaEcommerce.utils.JwtUtils;
 import com.example.javaEcommerce.common.Constant;
 import com.example.javaEcommerce.dto.CustomUserDetails;
@@ -62,6 +61,9 @@ public class AccessServiceImpl implements AccessService {
         Map<String, Object> payloadJwt = new HashMap<>();
         payloadJwt.put(Constant.PAYLOAD_USER_ID, shop.getId());
         payloadJwt.put(Constant.PAYLOAD_EMAIL, shop.getEmail());
+
+
+
 
         String accessToken = JwtUtils.generateToken(payloadJwt, Constant.TOKEN_EXPIRE_TIME);
         String refreshToken = JwtUtils.generateToken(payloadJwt, Constant.REFRESH_TOKEN_EXPIRE_TIME);

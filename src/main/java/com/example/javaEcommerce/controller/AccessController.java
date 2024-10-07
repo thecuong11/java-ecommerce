@@ -34,8 +34,6 @@ public class AccessController {
 
     @GetMapping("/fb/list")
     public ResponseDto<?> get() {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        System.out.println(authentication);
         return new ResponseDto<>("Hello World");
     }
 
